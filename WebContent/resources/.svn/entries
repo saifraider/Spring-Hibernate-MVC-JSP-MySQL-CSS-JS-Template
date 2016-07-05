@@ -1,0 +1,34 @@
+10
+
+dir
+12873
+http://192.168.1.200:82/svn/piramalinternal/SpringTest/WebContent/resources
+http://192.168.1.200:82/svn/piramalinternal
+
+
+
+2015-10-13T06:56:01.615505Z
+12873
+uma
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+421800b5-5c37-44ba-8343-8100a2d9f4b4
+
+css
+dir
+
+js
+dir
+

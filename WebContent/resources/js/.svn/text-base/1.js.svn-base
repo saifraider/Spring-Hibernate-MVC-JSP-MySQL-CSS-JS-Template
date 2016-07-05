@@ -1,0 +1,50 @@
+ $(document).ready( function() {
+   
+        // When site loaded, load the Popupbox First
+      	
+         $('#buttonUpdate').click(function(event) {  
+                    var ID=$('#Id').val();
+                    var NAME=$('#Name').val();
+                    var ADDRESS=$('#Address').val();
+                    var DOB=$('#Dob').val();
+                    var AGE=$('#Age').val();
+                    
+                 $.get('Controller_Update',{Id:ID,Name:NAME,Address:ADDRESS,Dob:DOB,Age:AGE},function(responseText) { 
+                        //alert(responseText);
+                        window.location.href ='${pageContext.request.contextPath}/'+"delete.jsp";
+                        unloadPopupBox();
+                    });
+                });
+        
+        $('.button1').click( function() {           
+            uu(this.id);
+        });
+        
+        $('#popupBoxClose').click( function() {           
+            unloadPopupBox();
+        });
+       
+        $('#container').click( function() {
+            unloadPopupBox();
+        });
+        
+        function uu(y)
+        {
+         
+            	loadPopupBox();
+        }
+
+        function unloadPopupBox() {    // TO Unload the Popupbox
+            $('#popup_box').fadeOut("slow");
+            $("#container").css({ // this is just for style       
+                "opacity": "1" 
+            });
+        }   
+       
+        function loadPopupBox() {    // To Load the Popupbox
+            $('#popup_box').fadeIn("slow");
+            $("#container").css({ // this is just for style
+                "opacity": "0.1" 
+            });        
+        }       
+    });
